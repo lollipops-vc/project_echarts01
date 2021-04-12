@@ -1,0 +1,509 @@
+/* 整个项目的背景图 */
+body{
+    background: url('../image/bg03.jpg') no-repeat;
+    background-size: cover;
+}
+.panel{
+    height: 150px;
+    border: 20px solid red;
+    box-sizing: border-box;
+    border-image-source: url('../image/border.png');
+    border-image-slice: 50 40 20 130;
+    border-image-width: 50px 40px 20px 130px;
+    border-image-repeat: stretch;
+    position: relative;
+}
+/* 边框 */
+.inner{
+    width: 100%;
+    position: absolute;
+}
+
+.container{
+    /* 设置高度：高度由内容撑开，设置一个最小的高度 */
+    min-height: 700px;
+    
+    /* 设置一个宽度，设置一个最大的宽度 */
+    max-width: 1920px;
+    /* 设置一个最小的宽度 */
+    min-width: 1500px;
+    /* 版心居中 */
+    margin: auto;
+    /* 伸缩布局 */
+    display: flex;
+    padding: 88px 20px 20px;
+}
+.top{
+    width: 100%;
+    height: 86px;
+    position: absolute;
+/* 设置背景图 */
+    background: url('../image/top.jpg') no-repeat left center;
+    background-size: cover;
+}
+.container .column:nth-child(1) {
+    flex: 3;
+}
+/* 数据概览 */
+.container .overview{
+    height: 105px;
+}
+.container .overview .item{
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+} 
+.container .overview .item span {
+    color: #4c9bfd;
+}
+.container .overview .item:nth-child(1) span i{
+    color: #006cff;
+}
+.container .overview .item:nth-child(2) span i{
+    color: #6acca3;
+}
+.container .overview .item:nth-child(3) span i{
+    color: #6acca3;
+}
+.container .overview .item:nth-child(4) span i{
+    color: #ed3f35;
+}
+.container .overview .item p{
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+/* 设备监控 */
+.container .monitor{
+    height: 475px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.container .monitor .tabs{
+    height: 20px;
+
+}
+.container .monitor .tabs a{
+    font-size: 18px;
+    color: #1950c4;
+    
+}
+.container .monitor .tabs a.active{
+    color: white;
+}
+.container .monitor .tabs a:nth-child(1){
+    border-right: 2px solid #00f2f1;
+    padding-right: 26px;
+    margin-right: 26px;
+}
+/* 页面 头部 */
+.container .monitor .content .head{
+    margin-top: 20px;
+    height: 38px;
+    line-height: 38px;
+    background-color: rgba(255,255,255,0.1);
+    margin-left: -40px;
+    padding-left: 30px;
+}
+.container .monitor .content .head span{
+    color:#68d8fe;
+    width:25%;
+    float: left;
+}
+.container .monitor .content .head span:nth-child(2){
+    width: 50%;
+}
+/* 页面 轮播图 */
+.container .monitor .content .carousel{
+    height: 350px;
+    overflow: hidden;
+    color:#5696e5;
+    margin-left: -40px;
+    position: relative;
+}
+.container .monitor .content .carousel ul{
+    position:absolute;
+}
+.container .monitor .content .carousel li{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 30px;
+}
+.container .monitor .content .carousel li:hover{
+    background-color: rgba(139, 245, 0, 0.699);
+}
+.container .monitor .content .carousel li span {
+    float: left;
+    widows: 25%;
+}
+.container .monitor .content .carousel li span:nth-child(2){
+    width: 50%;
+    /* 超出文字隐藏 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 50px;
+    
+}
+.container .monitor .content .carousel li span:nth-child(3){
+    padding-left: 40px;
+}
+/* 点位分布 */
+.container .point{
+    height: 330px;
+}
+.container .point h3{
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+
+}
+.container .point .echarts{
+    height: 240px;
+    margin-top: 5px;
+}
+.container .point .echarts .pie{
+    width: 65%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.1);  
+}
+.container .point .echarts .data{
+    width: 35%;
+    height: 100%;
+    background:url('../image/rect.png') no-repeat;
+    background-size: cover;
+}
+.container .point .echarts .data .item{
+    height: 50%;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.container .point .echarts .data .item p{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.container .point .echarts .data .item span {
+    color: #4c9bfd;
+}
+.container .column:nth-child(2) {
+    flex: 4;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container .map{
+    height: 600px;
+}
+.container .map .echarts .geo{
+    height: 100%;
+}
+.container .map h3{
+    height: 50px;
+    font-size: 22px;
+    line-height: 22px;
+    color: white;
+    font-weight: normal;
+    padding-top: 20px;
+}
+.container .map h3 span{
+    color: #68d8fe;
+    margin-right: 5px;
+}
+.container .map .echarts{
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.container .user{
+    height: 330px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.container .user h3{
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    overflow: hidden;
+
+}
+.container .user .echarts{
+    height: 240px;
+    margin-top: 5px;
+}
+.container .user .echarts .colh{
+    width: 70%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.1);  
+}
+.container .user .echarts .data{
+    width: 30%;
+    height: 100%;
+    background:url('../image/rect.png') no-repeat;
+    background-size: cover;
+}
+.container .user .echarts .data .item{
+    height: 50%;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.container .user .echarts .data .item p{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.container .user .echarts .data .item span {
+    color: #4c9bfd;
+}
+.container .column:nth-child(3) {
+    flex: 3;
+}
+/* 订单总量 */
+.container .order{
+    height: 142px;
+    padding-left: 25px;
+}
+.order .head{
+    height: 26px;
+    line-height: 26px;
+}
+.order .head a{
+    float: left;
+    color: #1950c4;
+    font-size: 14px;
+}
+.order .head a.active{
+    color: white;
+}
+.order .head span{
+    float: left;
+    background-color: #00f2f1;
+    width: 2px;
+    height: 18px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 4px;
+}
+.order .data{
+    height: 80px;
+    margin-top: 30px;
+}
+.order .data .item{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.order .data .item p{
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.order .data .item span {
+    color: #4c9bfd;
+
+}
+/* 销售额统计 */
+.container .sales{
+    height: 244px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.sales .head span {
+    font-size: 18px;
+    color: white;
+    border-right: 2px solid #00f2f1;
+    padding-right: 15px;
+
+
+}
+.sales .head a{
+    font-size: 14px;
+    color: #0bace6;
+    padding: 5px;
+    margin-left: 15px;
+    border-radius: 3px;
+}
+.sales .head a.active{
+    color: white;
+    background-color: #4c9bfd;
+}
+.sales .echarts {
+    height: 170px;
+    margin-top: 32px;
+}
+.sales .echarts .line{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.container .channel{
+    height: 229px;
+    width: 48%;
+}
+.channel .head{
+    color: white;
+    font-size: 18px;
+}
+.channel .data{
+    height: 160px;
+    margin-top: 10px;
+}
+.channel .data .item{
+    float: left;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+.channel .data .item p{
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.channel .data .item p b{
+    font-size: 24px;
+    margin-right: 2px;
+}
+.channel .data .item span {
+    color: rgb(20, 141, 221);
+}
+.container .quarter{
+    height: 229px;
+    width: 48%;
+}
+.container .quarter  .echarts .loop {
+    height: 100%;
+}
+.quarter h3{
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+
+}
+.quarter .echarts{
+    margin-top: 10px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+
+}
+.quarter .echarts .show{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.quarter .echarts .show b{
+    font-size: 16px;
+    margin-right: 2px;
+}
+.quarter .data{
+    height: 65px;
+    margin-top: 5px;
+}
+.quarter .data .item{
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+.quarter .data .item p{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.quarter .data .item span {
+    color: #4c9bfb;
+}
+.container .hot{
+    height: 280px;
+    margin-top: 13px;
+}
+.hot .all{
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+.hot .all h3{
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.hot .all .data{
+    height: 200px;
+    margin-top: 25px;
+}
+.hot .all .data p{
+    height: 33%;
+}
+.hot .all .data p i{
+    font-size: 30px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+.hot .all .data p span {
+    color: 4c9bfd;
+}
+.hot .province{
+    float: right;
+    width: 70%;
+    height: 100%;
+}
+.province h3{
+    margin-bottom: 20px;
+}
+.province h3 b{
+    float: left;
+    color: white;
+    font-size: 16px;
+}
+.province h3 i{
+    float: right;
+    color: #3d6ca7;
+}
+.province .data {
+    height: 200px;
+}
+.province .data ul{
+    width: 50%;
+
+}
+.province .data ul:nth-child(1){
+    color: #4995f4;
+}
+.province .data ul:nth-child(1) li.active{
+    color: #a3c6f2;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.province .data ul:nth-child(2){
+    color: #3ab6c3 ;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+}
+.province .data li{
+    height: 34px;
+    line-height: 34px;
+}
+.province .data ul li span {
+    float: left;
+}
+.province .data ul li b{
+    float: left;
+    width: 35%;
+    margin-left: 20px;
+}
+.province .data ul li i{
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+.province .data ul li i.icon-up{
+    color: red;
+}
+.province .data ul li i.icon-down{
+    color: springgreen;
+}

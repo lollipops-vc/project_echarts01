@@ -1,0 +1,20 @@
+echarts的简单用法
+常用的option类
+1，title：标题
+textStyle {}
+2,legend 图例组件
+3，grid
+top left right bottom 相当于是内边距
+width height 宽高
+4，坐标轴：
+xAxis x轴  yAxis y轴
+axisLine  轴线相关  属性： lineStyle 轴线样式
+axisTick  刻度相关  属性： lineStyle 刻度样式
+axisLabel 文本相关  color：文本颜色
+splitLine 分割线   lineStyle 分割线样式
+5，tooltip 提示框组件
+  show 是否显示
+  position  提示框的位置
+  textstyle：提示框文本样式
+
+
